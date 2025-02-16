@@ -35,14 +35,6 @@ public class Node<T> {
     }
 
     public static void main(String[] args) {
-        Node<String> one = new Node<>("abc");
-        Node<String> two = new Node<>("def");
-        Node<String> three = new Node<>("ghi");
-
-        one.setNext(two);
-        two.setNext(three);
-
-        System.out.println(one);
+        
     }
-    
 }
