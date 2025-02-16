@@ -1,31 +1,31 @@
 package unit05.mcf;
 
-public class Node {
-    private String value;
-    private Node next;
+public class Node<T> {
+    private T value;
+    private Node<T> next;
 
-    public Node(String value, Node next) {
+    public Node(T value, Node<T> next) {
         this.value = value;
         this.next = next;
     }
 
-    public Node(String value) {
+    public Node(T value) {
         this(value, null);
     }
 
-    public String getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(String value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 
@@ -35,9 +35,9 @@ public class Node {
     }
 
     public static void main(String[] args) {
-        Node one = new Node("abc");
-        Node two = new Node("def");
-        Node three = new Node("ghi");
+        Node<String> one = new Node<>("abc");
+        Node<String> two = new Node<>("def");
+        Node<String> three = new Node<>("ghi");
 
         one.setNext(two);
         two.setNext(three);
