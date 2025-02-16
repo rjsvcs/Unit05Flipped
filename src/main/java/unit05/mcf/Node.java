@@ -5,6 +5,7 @@ public class Node<T> {
     private Node<T> next;
 
     public Node(T value, Node<T> next) {
+        System.out.println("constructor: " + value.getClass());
         this.value = value;
         this.next = next;
     }
@@ -14,10 +15,12 @@ public class Node<T> {
     }
 
     public T getValue() {
+        System.out.println("getting: " + value.getClass());
         return value;
     }
 
     public void setValue(T value) {
+        System.out.println("setting: " + value.getClass());
         this.value = value;
     }
 
@@ -35,6 +38,9 @@ public class Node<T> {
     }
 
     public static void main(String[] args) {
-        
+        Node<Integer> node = new Node<>(123);
+        int x = node.getValue();
+        System.out.println(x);
+        node.setValue(456);
     }
 }
